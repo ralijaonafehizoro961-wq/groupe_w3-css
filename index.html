@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PIYA-w3-css</title>
+    <link rel="stylesheet" href="4/w3.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      h1,
+      h2,
+      h4,
+      .section-title {
+        font-family: "Playfair Display", serif;
+      }
+      .hero-top {
+        background:#d5defc;
+      }
+      .promo {
+        background: #1f2124;
+        color: white;
+        font-size: 13px;
+        padding: 6px 0;
+        text-align: center;
+      }
+      .hero-image {
+        height: 320px;
+        background-size: cover;
+        background-position: center;
+      }
+      .section-title {
+        text-align: center;
+        font-size: 26px;
+        margin-top: 40px;
+      }
+      .product-img,
+      .category-img {
+        width: 300px;
+        height: 400px;
+        object-fit: cover;
+      }
+      .newsletter {
+        background: #cfcece;
+        padding: auto;
+        padding-bottom: 40px;
+      }
+      .input{
+        background: #cfcece;
+      }
+      .footer{
+        background: #acaaaa;
+      }
+      /* Responsive header menu */
+      @media screen and (max-width: 700px) {
+        .w3-right-align a {
+          display: block;
+          margin: 4px 0;
+        }
+        .hero-image {
+          height: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--premier bare -->
+    <div class="promo">
+      Obtenez -10% EXTRAS sur votre 1ER ACHAT avec le code promo : PIYA976
+    </div>
+    <!--en tete-->
+    <header class="w3-white w3-card w3-padding-32 w3-padding-small">
+      <div class="w3-row w3-padding-small w3-center w3-middle">
+        <!--logo PIYA-->
+        <div class="w3-col s12 m3 l2 w3-left-align w3-center">
+          <img src="image/Capture d’écran 2025-11-25 111358.png" alt="Logo PIYA" class="w3-image" style="max-height: 70px"/>
+        </div>
+        <!--barre de navigation-->
+        <div class="w3-col s12 m6 l8 w3-center w3-padding-small">
+          <a href="#" class="w3-button w3-white w3-hover-light-grey">ACCUEIL</a>
+          <a href="#" class="w3-button w3-white w3-hover-light-grey">BOUTIQUE</a>
+          <a href="#" class="w3-button w3-white w3-hover-light-grey">À PROPOS</a>
+          <a href="#" class="w3-button w3-white w3-hover-light-grey">COMMANDE</a>
+          <!--BARRE QUI SEPARE LE NAVBAR ET LE TEXTE EN BAS-->
+          <div class="w3-black" style="height:2px; width:70%; margin:8px auto;"></div>
+          <p style="font-size:15px; color:#888; margin-top:30px;">Prêt à porter pour hommes et femmes</p>
+        </div>
+        <!--icon -->
+        <div class="w3-col s12 m3 l2 w3-right-align w3-padding-small w3-center">
+          <div class="w3-button w3-white w3-hover-light-grey w3-padding-small" style="position: relative">
+            <span class="w3-badge w3-red w3-small" style="position: absolute; top: -4px; right: -4px" >0</span>
+            <img src="image/cart.png" alt="logo"class="w3-image w3-border w3-border-black w3-round-large" style="max-width: 500%; height: 30px;"> 
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="hero-top w3-center  w3-padding-32">
+      <h1>PIYA, de tout partout, pour vous</h1>
+      <h2>PIYA MAYOTTE, LA NOUVELLE MODE.</h2>
+      <div class="w3-btn w3-white w3-border w3-border-black ">COLLECTION RAMADAN</div>
+    </div>
+    <div class="hero-image" style="background-image: url('image/Capture\ d’écran\ 2025-11-25\ 084947.png');" ></div>
+    <!--CATEGORIES-->
+    <div class="w3-row w3-center" style="display: flex;align-items:center;gap: 16px;width:100%">
+      <div style="flex: 1;border-top: 1px solid #888;"></div>
+      <h2 class="w3-center" style="white-space: nowrap;">Catégorie</h2>
+      <div style="flex: 1;border-top: 1px solid #888;"></div>
+    </div>
+    <div class="w3-row-padding w3-padding-32">
+      <div class="w3-third w3-center">
+        <img class="category-img w3-card" src="image/ai-generated-8960912_640.png"/>
+        <h4><b>MAISON</b></h4>
+        <a class="w3-btn w3-white w3-border w3-border-black " style="margin-bottom: 20px;">DÉCOUVRIR</a>
+      </div>
+      <div class="w3-third w3-center">
+        <img class="category-img w3-card" src="image/woman-4390055_640.jpg" />
+        <h4><b>FEMME</b></h4>
+        <a class="w3-btn w3-white w3-border w3-border-black" style="margin-bottom: 20px;">DÉCOUVRIR</a>
+      </div>
+      <div class="w3-third w3-center">
+        <img class="category-img w3-card" src="image/téléchargement (3).jpeg" />
+        <h4><b>ACCESSOIRE</b></h4>
+        <a class="w3-btn w3-white w3-border w3-border-black" style="margin-bottom: 20px;">DÉCOUVRIR</a>
+      </div>
+    </div>
+    <!--PRODUITS RECENTS-->
+     <div class="w3-row w3-center" style="display: flex;align-items:center;gap: 16px;width:100%">
+      <div style="flex: 1;border-top: 1px solid #888;"></div>
+      <h2 class="w3-center" style="white-space: nowrap;">Produits récents</h2>
+      <div style="flex: 1;border-top: 1px solid #888;"></div>
+    </div>
+    <div class="w3-row-padding w3-padding-32">
+      <div class="w3-third w3-center">
+        <img class="product-img w3-card" src="image/téléchargement (1).jpeg" />
+        <p>Enceinte portable PIYA</p>
+        <p><del>69,99€</del> 39,99€</p>
+        <a class="w3-btn w3-white w3-border w3-border-black" style="margin-bottom: 20px;">AJOUTER AU PANIER</a>
+      </div>
+      <div class="w3-third w3-center">
+        <img class="product-img w3-card" src="image/téléchargement.jpeg" />
+        <p>Short gainant</p>
+        <p>29,99€</p>
+        <a class="w3-btn w3-white w3-border w3-border-black" style="margin-bottom: 20px;">AJOUTER AU PANIER</a>
+      </div>
+      <div class="w3-third w3-center">
+        <img class="product-img w3-card" src="image/téléchargement (2).jpeg" />
+        <p>Jupe et top artistique simple</p>
+        <p><del>69,99€</del> <b>34,50€</b></p>
+        <a class="w3-btn w3-white w3-border w3-border-black" style="margin-bottom: 20px;">AJOUTER AU PANIER</a>
+      </div>
+    </div>
+    <!--CONTACT-->
+    <h2 class="section-title">Contactez Nous</h2>
+    <div class="w3-container " style="max-width: 700px; margin: auto">
+      <label><b>Nom</b></label>
+      <input class="w3-input w3-border" placeholder=" votre Nom"/>
+      <label><b>E-mail</b></label>
+      <input class="w3-input w3-border" placeholder=" votre E-mail"/>
+      <label><b>Message</b></label>
+      <textarea class="w3-input w3-border" style="height: 120px" placeholder=" votre Message ici"></textarea>
+      <button class="w3-button w3-block  w3-margin-top" type="submit" style="margin-bottom: 50px;background:#d5defc;">ENVOYER</button>
+    </div>
+    <div class="newsletter w3-center">
+      <h4>Recevez des promotions exclusives et nouveautés</h4>
+      <input class=" input w3-input w3-border-black " style="max-width: 300px; margin: auto" placeholder=" Saisissez Votre adresse email" />
+      <button class="w3-button w3-block w3-black w3-margin-top" style="max-width: 300px; margin: auto">M'INSCRIRE</button>
+    </div>
+    <!--PIEDS DE LE PAGE-->
+    <footer class="footer w3-center  w3-padding-32">
+      <div class="w3-bar w3-center ">
+        <a href="#" class="w3-bar-item w3-button w3-hover-light-grey w3-text-black">Acceuil</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-light-grey w3-text-black">Boutique</a>
+        <a href="#" class="w3-bar-item w3-button w3-hover-light-grey w3-text-black">A propos</a>
+      </div>
+      <p class="w3-text-grey">Tous droits réservés.&copy; PIYA</p>
+      <p class="w3-text-grey">Mentions légales CGV</p>
+    </footer>
+  </body>
+</html>
