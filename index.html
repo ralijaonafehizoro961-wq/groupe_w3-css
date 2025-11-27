@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>K-moodeuh</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/letter-k.ico" title="letter k icons">
+  <style>
+  
+  body { font-family: "Open Sans", sans-serif; color: #222; }
+    h1,h2,h3 { font-family: "Playfair Display", serif; }
+    .hero {
+      background-image: url('img/premium_photo-1681855277069-3248fceeccd6.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      position: relative;
+    }
+    .hero .overlay {
+      position: absolute; inset:0; background: rgba(0,0,0,0.35);
+    }
+    .hero .inner { position: relative; z-index: 2; text-align:center; }
+    .category-card { overflow: hidden; }
+    .category-card img { width:100%; display:block; transition: transform .4s; }
+    .category-card:hover img { transform: scale(1.05); }
+    .section-band { padding: 60px 0; text-align:center; }
+    .section-band .band-bg {
+      background-size: cover;
+      background-position: center;
+      padding: 60px 0;
+      color: #fff;
+    }
+    .product-card img { width:100%; display:block; }
+    .small-card img { width:100%; display:block; border-radius:4px; }
+    footer { background:#111; color:#ddd; padding:40px 0; }
+    .muted { color: #777; font-size: .95rem; }
+    @media (max-width:600px){
+      .hero { min-height:260px; padding: 40px 12px; }
+    }
+  </style>
+</head>
+<body class="w3-light-grey">
+
+  <!-- NAVBAR -->
+  <header class="w3-white w3-card-2">
+    <div class="w3-container w3-padding-16">
+      <div class="w3-bar">
+        <a href="#" class="w3-bar-item w3-button w3-large">Mayonka</a>
+        <div class="w3-right w3-hide-small">
+          <a href="#" class="w3-bar-item w3-button">Accueil</a>
+          <a href="#" class="w3-bar-item w3-button">Robes</a>
+          <a href="#" class="w3-bar-item w3-button">Lingerie</a>
+          <a href="#" class="w3-bar-item w3-button">Lookbooks</a>
+          <a href="#" class="w3-bar-item w3-button">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero w3-margin-top">
+    <div class="overlay"></div>
+    <div class="inner w3-padding-48">
+      <h1 style="font-size:3rem; margin:0">Robes &amp; Combinaisons</h1>
+      <p class="muted" style="margin-top:10px">Collection printemps - été</p>
+      <p class="w3-margin-top"><a href="#" class="w3-button w3-white w3-border">Voir la collection</a></p>
+    </div>
+  </section>
+
+  <!-- CATEGORIES (4) -->
+  <section class="w3-container w3-white w3-padding-48">
+    <div class="w3-row-padding">
+      <div class="w3-quarter w3-padding-small">
+        <div class="w3-card-2 category-card">
+          <img src="img/fashion-9464875.jpg" alt="Cat 1">
+          <div class="w3-container w3-padding-small">
+            <h3 style="margin:6px 0">Robes & Combinaisons</h3>
+            <p class="muted">Découvrez la gamme</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-quarter w3-padding-small">
+        <div class="w3-card-2 category-card">
+          <img src="img/woman-7590657_1920.jpg" alt="Cat 2">
+          <div class="w3-container w3-padding-small">
+            <h3 style="margin:6px 0">Lingerie</h3>
+            <p class="muted">Soie & dentelle</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-quarter w3-padding-small">
+        <div class="w3-card-2 category-card">
+          <img src="img/woman-8793611_1920.jpg" alt="Cat 3">
+          <div class="w3-container w3-padding-small">
+            <h3 style="margin:6px 0">Accessoires</h3>
+            <p class="muted">Sacs & bijoux</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-quarter w3-padding-small">
+        <div class="w3-card-2 category-card">
+          <img src="img/woman-7654751_1920.jpg" alt="Cat 4">
+          <div class="w3-container w3-padding-small">
+            <h3 style="margin:6px 0">Nouveautés</h3>
+            <p class="muted">À ne pas manquer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER / PROMO -->
+  <section class="section-band">
+    <div class="band-bg" style="background-image:url('img/211350475-generative-ai-morning-awakening-of-a-young-woman-in-bed.jpg')">
+      <div class="w3-container">
+        <h2 style="font-size:2rem; margin-bottom:8px">Une lingerie en soie &amp; dentelle de Calais</h2>
+        <p class="muted">Finesse et confort — édition limitée</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="w3-container w3-white w3-padding-48">
+    <h2 class="w3-center">Produits mis en avant</h2>
+    <div class="w3-row-padding w3-margin-top">
+      <div class="w3-quarter w3-padding-small">
+        <div class="w3-card-4 product-card">
+          <img src="img/woman-7739016_1920.jpg" alt="Produit 1">
+          <div class="w3-container w3-padding-small">
+            <h4 style="margin:6px 0">Short Soie</h4>
+            <p class="muted">49 €</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-quarter w3-padding-small">
+        <div class="w3-card-4 product-card">
+          <img src="img/cocktail.webp" alt="Produit 2">
+          <div class="w3-container w3-padding-small">
+            <h4 style="margin:6px 0">Robe Cocktail</h4>
+            <p class="muted">129 €</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-quarter w3-padding-small">
+        <div class="w3-card-4 product-card">
+          <img src="img/womens-clothing-9608631_1920.jpg" alt="Produit 3">
+          <div class="w3-container w3-padding-small">
+            <h4 style="margin:6px 0">Combinaison Nuit</h4>
+            <p class="muted">99 €</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-quarter w3-padding-small">
+        <div class="w3-card-4 product-card">
+          <img src="img/fabric-9652451_1920.jpg" alt="Produit 4">
+          <div class="w3-container w3-padding-small">
+            <h4 style="margin:6px 0">Top Dentelle</h4>
+            <p class="muted">69 €</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECOND LARGE BAND -->
+  <section class="section-band" style="background:#f7f3ef;">
+    <div class="w3-container">
+      <h2 class="w3-center">Robes et Combinaisons</h2>
+      <div class="w3-row-padding w3-margin-top">
+
+        <div class="w3-quarter w3-padding-small">
+          <div class="w3-white w3-padding-small small-card">
+            <img src="img/woman-1840538_1920.jpg" alt="">
+            <div class="w3-container">
+              <h4 style="margin:8px 0">Robe imprimée</h4>
+              <p class="muted">79 €</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-quarter w3-padding-small">
+          <div class="w3-white w3-padding-small small-card">
+            <img src="img/woman-9488077_1920.jpg" alt="">
+            <div class="w3-container">
+              <h4 style="margin:8px 0">Pull chic</h4>
+              <p class="muted">59 €</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-quarter w3-padding-small">
+          <div class="w3-white w3-padding-small small-card">
+            <img src="img/combinaison_noire.webp" alt="">
+            <div class="w3-container">
+              <h4 style="margin:8px 0">Combinaison noire</h4>
+              <p class="muted">139 €</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-quarter w3-padding-small">
+          <div class="w3-white w3-padding-small small-card">
+            <img src="img/chemise_soyeuse.webp" alt="">
+            <div class="w3-container">
+              <h4 style="margin:8px 0">Chemise soyeuse</h4>
+              <p class="muted">69 €</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section-band">
+    <div class="band-bg" style="background-image:url('img/pt.jpg')">
+      <div class="w3-container">
+        <h2 style="font-size:2rem; margin-bottom:8px">Quoi acheter maintenant?</h2>
+        <p class="muted">Finesse et confort — édition limitée</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOOKBOOKS -->
+  <section class="w3-container w3-padding-48 w3-white">
+    <h2 class="w3-center">Nouveau Lookbooks</h2>
+    <div class="w3-row-padding w3-margin-top">
+
+      <div class="w3-third w3-padding-small">
+        <div class="w3-card-4">
+          <img src="img/michelle-obama-1129160_1280.jpg" style="width: 100%;border-radius: 6px;">
+          <div class="w3-container w3-padding-small">
+            <h4>Michelle OBAMA</h4>
+            <p class="muted">Grande, élégante, athlétique, modèle de leadership féminin.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-third w3-padding-small">
+        <div class="w3-card-4">
+          <img src="img/d2d4.jpg" style="width: 100%;border-radius: 6px;">
+          <div class="w3-container w3-padding-small">
+            <h4>Rihanna</h4>
+            <p class="muted">Style audacieux, avant-gardiste, créative et puissante.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-third w3-padding-small">
+        <div class="w3-card-4">
+          <img src="img/OIP.webp" style="width: 100%;border-radius: 6px;">
+          <div class="w3-container w3-padding-small">
+            <h4>Elizabeth Taylor</h4>
+            <p class="muted">Style glamour, bijoux luxueux, beauté classique.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="w3-container">
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <h3 style="color:#fff; margin-top:6px">Inscrivez-vous à la newsletter</h3>
+          <p class="muted">Recevez nos nouveautés & offres.</p>
+          <form class="w3-row">
+            <div class="w3-col s8">
+              <input class="w3-input w3-white w3-border" type="email" placeholder="Votre email">
+            </div>
+            <div class="w3-col s4">
+              <button class="w3-button w3-dark-grey w3-block">S'abonner</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="w3-half w3-right-align">
+          <h4 style="color:#fff">Mayonka</h4>
+          <p class="muted">© 2025 Mayonka — Tous droits réservés</p>
+          <p class="muted">Mentions légales · CGV · Contact</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
