@@ -6,6 +6,7 @@
     <title>PIYA-w3-css</title>
     <link rel="stylesheet" href="4/w3.css" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
       body {
         font-family: "Montserrat", sans-serif;
@@ -16,11 +17,13 @@
       .section-title {
         font-family: "Playfair Display", serif;
       }
+      .barre{
+        background: rgb(20, 25, 38);
+      }
       .hero-top {
         background:#d5defc;
       }
       .promo {
-        background: #1f2124;
         color: white;
         font-size: 13px;
         padding: 6px 0;
@@ -53,23 +56,92 @@
       .footer{
         background: #acaaaa;
       }
-      /* Responsive header menu */
-      @media screen and (max-width: 700px) {
-        .w3-right-align a {
-          display: block;
-          margin: 4px 0;
+      /* Responsivité de mon site */
+      @media screen and (max-width: 1024px) {
+        .w3-row {
+          flex-wrap: wrap;
+        }
+        .hero-image {
+          height: 250px;
+        }
+        .product-img,
+        .category-img {
+          width: 90%;
+          height: auto;
+          margin: auto;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .w3-col.m6, .w3-col.m3, .w3-col.l2, .w3-col.l8 {
+          width: 100% !important;
+          text-align: center !important;
         }
         .hero-image {
           height: 200px;
+        }
+        .w3-button {
+          margin-bottom: 10px;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .w3-row-padding {
+          padding: 0 !important;
+        }
+        .product-img,
+        .category-img {
+          width: 100%;
+          height: auto;
+        }
+        .promo {
+          font-size: 12px;
+          padding: 4px 0;
+        }
+        .w3-button {
+          font-size: 12px !important;
+          padding: 4px 8px !important;
+        }
+        .hero-top h1 {
+          font-size: 20px;
+        }
+        .hero-top h2 {
+          font-size: 16px;
         }
       }
     </style>
   </head>
   <body>
     <!--premier bare -->
-    <div class="promo">
-      Obtenez -10% EXTRAS sur votre 1ER ACHAT avec le code promo : PIYA976
+    <div class="promo w3-dark-grey">
+      Obtenez <b>-10% </b>EXTRAS sur votre 1ER ACHAT avec le code promo : <b>PIYA976</b><button class="w3-button w3-white w3-round-large w3-tiny" style="margin-left: 10px;">venez vite</button>
     </div>
+    <!--barre blanc-->
+    <div style="width:100%; height:4px; background:white;"></div>
+    <!--second barre-->
+    <div class=" barre w3-bar  w3-padding-small" style="display:flex; align-items:center; justify-content:space-between;">
+    <div style="display:flex; align-items:center; gap:20px;">
+
+      <div class="w3-bar-item w3-text-white" style="display:flex; align-items:center; gap:8px;">
+        <i class="fa-brands fa-wordpress fa-lg"></i>
+        <span>Mon site</span>
+      </div>
+
+      <div class="w3-bar-item w3-text-white" style="display:flex; align-items:center; gap:8px;">
+        <i class="fa-regular fa-window-restore"></i>
+        <span>Lecteur</span>
+      </div>
+    </div>
+
+<div style="display:flex; align-items:center; gap:18px;">
+  <button class="w3-button w3-white  w3-tiny w3-round-large" style="display:flex; align-items:center; gap:6px;">
+    <i class="fa-solid fa-pen"></i>
+    Écrire
+  </button>
+  <i class="fa-regular fa-circle-user w3-text-white fa-lg"></i>
+  <i class="fa-regular fa-bell w3-text-white fa-lg"></i>
+</div>
+</div>
     <!--en tete-->
     <header class="w3-white w3-card w3-padding-32 w3-padding-small">
       <div class="w3-row w3-padding-small w3-center w3-middle">
@@ -82,6 +154,7 @@
           <a href="#" class="w3-button w3-white w3-hover-light-grey">ACCUEIL</a>
           <a href="#" class="w3-button w3-white w3-hover-light-grey">BOUTIQUE</a>
           <a href="#" class="w3-button w3-white w3-hover-light-grey">À PROPOS</a>
+          <a href="#" class="w3-button w3-white w3-hover-light-grey">PANIER</a>
           <a href="#" class="w3-button w3-white w3-hover-light-grey">COMMANDE</a>
           <!--BARRE QUI SEPARE LE NAVBAR ET LE TEXTE EN BAS-->
           <div class="w3-black" style="height:2px; width:70%; margin:8px auto;"></div>
@@ -89,9 +162,12 @@
         </div>
         <!--icon -->
         <div class="w3-col s12 m3 l2 w3-right-align w3-padding-small w3-center">
-          <div class="w3-button w3-white w3-hover-light-grey w3-padding-small" style="position: relative">
-            <span class="w3-badge w3-red w3-small" style="position: absolute; top: -4px; right: -4px" >0</span>
-            <img src="image/cart.png" alt="logo"class="w3-image w3-border w3-border-black w3-round-large" style="max-width: 500%; height: 30px;"> 
+          <div class="w3-white w3-border w3-border-black w3-round-large w3-padding-small w3-hover-light-grey" style="display: inline-block; position: relative;">
+            <span class="w3-badge w3-red w3-small" 
+              style="position: absolute; top: -6px; right: -6px;">0</span>
+            <i class="fa-solid fa-cart-shopping"
+           style="font-size: 25px; color: white; -webkit-text-stroke: 1.5px black;">
+            </i>
           </div>
         </div>
       </div>
@@ -99,7 +175,7 @@
     <div class="hero-top w3-center  w3-padding-32">
       <h1>PIYA, de tout partout, pour vous</h1>
       <h2>PIYA MAYOTTE, LA NOUVELLE MODE.</h2>
-      <div class="w3-btn w3-white w3-border w3-border-black ">COLLECTION RAMADAN</div>
+      <div class="w3-button w3-transparent w3-border w3-border-white w3-text-white w3-text-white w3-large"><b>COLLECTION RAMADAN</b></div>
     </div>
     <div class="hero-image" style="background-image: url('image/Capture\ d’écran\ 2025-11-25\ 084947.png');" ></div>
     <!--CATEGORIES-->
