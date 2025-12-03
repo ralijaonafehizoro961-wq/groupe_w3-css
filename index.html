@@ -1,298 +1,662 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>K-moodeuh</title>
+  <meta charset="UTF-8">
+  <title>MayonKa</title>
+
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="img/letter-k.ico" title="letter k icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <style>
-  
-  body { font-family: "Open Sans", sans-serif; color: #222; }
-    h1,h2,h3 { font-family: "Playfair Display", serif; }
-    .hero {
-      background-image: url('img/premium_photo-1681855277069-3248fceeccd6.jpg');
+    body {
+      font-family: "Playfair Display", serif;
+    }
+
+    .menu-top span {
+      margin: 0 15px;
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    .btn-white {
+      border: 1px solid white;
+      padding: 8px 25px;
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    .hero-text {
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    :root {
+      --accent: #b1906a;
+      /* doré */
+      --muted: #f4f4f4;
+      --text: #222;
+    }
+
+    body {
+      font-family: 'Open Sans', serif;
+      color: var(--text);
+    }
+
+    .brand {
+      font-family: 'Playfair Display';
+      font-size: 36px;
+      letter-spacing: 2px;
+      color: var(--accent)
+    }
+
+    .topbar {
+      font-size: 14px;
+      background: #f3f3f3;
+      padding: 8px 0
+    }
+
+
+    .hero-slide {
+      height: 78vh;
       background-size: cover;
       background-position: center;
-      min-height: 420px;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display';
+      font-size: 64px;
+      color: #fff;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, .4);
+    }
+
+    .hero-cta {
+      background: #fff;
+      color: #222;
+      padding: 12px 24px;
+      border: none
+    }
+
+     .cat-card {
+      position: relative;
+      overflow: hidden;
+      height: 420px;
+      background-size: cover;
+      background-position: center
+    }
+
+    .cat-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(14, 14, 14, 0.45);
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: center
+    }
+
+    .cat-title {
       color: #fff;
-      position: relative;
+      font-family: 'Playfair Display';
+      letter-spacing: 1px
     }
-    .hero .overlay {
-      position: absolute; inset:0; background: rgba(0,0,0,0.35);
+
+
+    .product-title {
+      font-family: 'Lora';
+      color: var(--accent);
+      font-size: 14px
     }
-    .hero .inner { position: relative; z-index: 2; text-align:center; }
-    .category-card { overflow: hidden; }
-    .category-card img { width:100%; display:block; transition: transform .4s; }
-    .category-card:hover img { transform: scale(1.05); }
-    .section-band { padding: 60px 0; text-align:center; }
-    .section-band .band-bg {
+
+    .price {
+      font-weight: 600
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #888;
+      margin-right: 8px
+    }
+
+    .promo-badge {
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      background: var(--accent);
+      color: #fff;
+      padding: 6px 8px;
+      font-size: 12px
+    }
+
+    .prod-card {
+      position: relative
+    }
+
+
+    .lookbook-hero {
+      height: 420px;
       background-size: cover;
       background-position: center;
-      padding: 60px 0;
-      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center
     }
-    .product-card img { width:100%; display:block; }
-    .small-card img { width:100%; display:block; border-radius:4px; }
-    footer { background:#111; color:#ddd; padding:40px 0; }
-    .muted { color: #777; font-size: .95rem; }
-    @media (max-width:600px){
-      .hero { min-height:260px; padding: 40px 12px; }
+
+    .lookbook-title {
+      font-family: 'Playfair Display';
+      font-size: 56px;
+      color: #fff;
+      text-align: center
+    }
+
+
+    .article-title {
+      font-family: 'Lora';
+      font-weight: 700
+    }
+
+
+    .testimonial {
+      padding: 48px 16px
+    }
+
+    .testimonial h3 {
+      font-family: 'Playfair Display';
+    }
+
+
+    .site-footer {
+      background: #0b0b0b;
+      color: #eee;
+      padding: 48px 0
+    }
+
+    .footer h5 {
+      color: var(--accent);
+      font-family: 'Playfair Display'
+    }
+
+
+    @media (max-width:880px) {
+      .hero-title {
+        font-size: 38px
+      }
+
+      .lookbook-title {
+        font-size: 36px
+      }
     }
   </style>
 </head>
-<body class="w3-light-grey">
 
-  <!-- NAVBAR -->
-  <header class="w3-white w3-card-2">
-    <div class="w3-container w3-padding-16">
-      <div class="w3-bar">
-        <a href="#" class="w3-bar-item w3-button w3-large">Mayonka</a>
-        <div class="w3-right w3-hide-small">
-          <a href="#" class="w3-bar-item w3-button">Accueil</a>
-          <a href="#" class="w3-bar-item w3-button">Robes</a>
-          <a href="#" class="w3-bar-item w3-button">Lingerie</a>
-          <a href="#" class="w3-bar-item w3-button">Lookbooks</a>
-          <a href="#" class="w3-bar-item w3-button">Contact</a>
-        </div>
-      </div>
+<body>
+  </style>
+  </head>
+
+  <body>
+
+
+    <div class="w3-light-grey w3-padding-small w3-small w3-row">
+      <div class="w3-third w3-left-align"> Contactez-nous : +33 621 193 823</div>
+      <div class="w3-third w3-center"> Livraison offerte dès 150€ d'achat.</div>
+      <div class="w3-third w3-right-align"> Termes et conditions</div>
     </div>
-  </header>
 
-  <!-- HERO -->
-  <section class="hero w3-margin-top">
-    <div class="overlay"></div>
-    <div class="inner w3-padding-48">
-      <h1 style="font-size:3rem; margin:0">Robes &amp; Combinaisons</h1>
-      <p class="muted" style="margin-top:10px">Collection printemps - été</p>
-      <p class="w3-margin-top"><a href="#" class="w3-button w3-white w3-border">Voir la collection</a></p>
-    </div>
-  </section>
+    <div class="w3-white w3-padding-12 w3-container" style="position: relative;">
 
-  <!-- CATEGORIES (4) -->
-  <section class="w3-container w3-white w3-padding-48">
-    <div class="w3-row-padding">
-      <div class="w3-quarter w3-padding-small">
-        <div class="w3-card-2 category-card">
-          <img src="img/fashion-9464875.jpg" alt="Cat 1">
-          <div class="w3-container w3-padding-small">
-            <h3 style="margin:6px 0">Robes & Combinaisons</h3>
-            <p class="muted">Découvrez la gamme</p>
-          </div>
-        </div>
-      </div>
-      <div class="w3-quarter w3-padding-small">
-        <div class="w3-card-2 category-card">
-          <img src="img/woman-7590657_1920.jpg" alt="Cat 2">
-          <div class="w3-container w3-padding-small">
-            <h3 style="margin:6px 0">Lingerie</h3>
-            <p class="muted">Soie & dentelle</p>
-          </div>
-        </div>
-      </div>
-      <div class="w3-quarter w3-padding-small">
-        <div class="w3-card-2 category-card">
-          <img src="img/woman-8793611_1920.jpg" alt="Cat 3">
-          <div class="w3-container w3-padding-small">
-            <h3 style="margin:6px 0">Accessoires</h3>
-            <p class="muted">Sacs & bijoux</p>
-          </div>
-        </div>
-      </div>
-      <div class="w3-quarter w3-padding-small">
-        <div class="w3-card-2 category-card">
-          <img src="img/woman-7654751_1920.jpg" alt="Cat 4">
-          <div class="w3-container w3-padding-small">
-            <h3 style="margin:6px 0">Nouveautés</h3>
-            <p class="muted">À ne pas manquer</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- BANNER / PROMO -->
-  <section class="section-band">
-    <div class="band-bg" style="background-image:url('img/211350475-generative-ai-morning-awakening-of-a-young-woman-in-bed.jpg')">
-      <div class="w3-container">
-        <h2 style="font-size:2rem; margin-bottom:8px">Une lingerie en soie &amp; dentelle de Calais</h2>
-        <p class="muted">Finesse et confort — édition limitée</p>
+      <div class="w3-center" style="font-size:24px; letter-spacing:2px; font-weight:500;">
+        MayonKa
       </div>
-    </div>
-  </section>
-
-  <!-- FEATURED PRODUCTS -->
-  <section class="w3-container w3-white w3-padding-48">
-    <h2 class="w3-center">Produits mis en avant</h2>
-    <div class="w3-row-padding w3-margin-top">
-      <div class="w3-quarter w3-padding-small">
-        <div class="w3-card-4 product-card">
-          <img src="img/woman-7739016_1920.jpg" alt="Produit 1">
-          <div class="w3-container w3-padding-small">
-            <h4 style="margin:6px 0">Short Soie</h4>
-            <p class="muted">49 €</p>
-          </div>
-        </div>
+      <div class="w3-black w3-center w3-padding-small menu-top">
+        <span>ACCUEIL</span>
+        <span>BOUTIQUE</span>
+        <span>LOOKBOOK</span>
+        <span>BLOG</span>
+        <span>A PROPOS</span>
+        <span>PRODUITS À LA UNE</span>
       </div>
 
-      <div class="w3-quarter w3-padding-small">
-        <div class="w3-card-4 product-card">
-          <img src="img/cocktail.webp" alt="Produit 2">
-          <div class="w3-container w3-padding-small">
-            <h4 style="margin:6px 0">Robe Cocktail</h4>
-            <p class="muted">129 €</p>
-          </div>
+
+      <div class="w3-display-container" style="width:100%; height:420px;">
+        <img src="img/Capture d'écran 2025-12-02 141903.png" style="width:100%; height:100%; object-fit:cover;">
+
+        <div class="w3-display-middle w3-center hero-text">
+          <h1 class="w3-xlarge" style="color:white;">
+            Robes & Combinaisons
+          </h1>
+
+          <br>
+
+          <a class="w3-button btn-white w3-text-white">
+            VOIR LA BOUTIQUE
+          </a>
         </div>
       </div>
+  </body>
 
-      <div class="w3-quarter w3-padding-small">
-        <div class="w3-card-4 product-card">
-          <img src="img/womens-clothing-9608631_1920.jpg" alt="Produit 3">
-          <div class="w3-container w3-padding-small">
-            <h4 style="margin:6px 0">Combinaison Nuit</h4>
-            <p class="muted">99 €</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="w3-quarter w3-padding-small">
-        <div class="w3-card-4 product-card">
-          <img src="img/fabric-9652451_1920.jpg" alt="Produit 4">
-          <div class="w3-container w3-padding-small">
-            <h4 style="margin:6px 0">Top Dentelle</h4>
-            <p class="muted">69 €</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECOND LARGE BAND -->
-  <section class="section-band" style="background:#f7f3ef;">
-    <div class="w3-container">
-      <h2 class="w3-center">Robes et Combinaisons</h2>
-      <div class="w3-row-padding w3-margin-top">
-
-        <div class="w3-quarter w3-padding-small">
-          <div class="w3-white w3-padding-small small-card">
-            <img src="img/woman-1840538_1920.jpg" alt="">
-            <div class="w3-container">
-              <h4 style="margin:8px 0">Robe imprimée</h4>
-              <p class="muted">79 €</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="w3-quarter w3-padding-small">
-          <div class="w3-white w3-padding-small small-card">
-            <img src="img/woman-9488077_1920.jpg" alt="">
-            <div class="w3-container">
-              <h4 style="margin:8px 0">Pull chic</h4>
-              <p class="muted">59 €</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="w3-quarter w3-padding-small">
-          <div class="w3-white w3-padding-small small-card">
-            <img src="img/combinaison_noire.webp" alt="">
-            <div class="w3-container">
-              <h4 style="margin:8px 0">Combinaison noire</h4>
-              <p class="muted">139 €</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="w3-quarter w3-padding-small">
-          <div class="w3-white w3-padding-small small-card">
-            <img src="img/chemise_soyeuse.webp" alt="">
-            <div class="w3-container">
-              <h4 style="margin:8px 0">Chemise soyeuse</h4>
-              <p class="muted">69 €</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section-band">
-    <div class="band-bg" style="background-image:url('img/pt.jpg')">
-      <div class="w3-container">
-        <h2 style="font-size:2rem; margin-bottom:8px">Quoi acheter maintenant?</h2>
-        <p class="muted">Finesse et confort — édition limitée</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- LOOKBOOKS -->
-  <section class="w3-container w3-padding-48 w3-white">
-    <h2 class="w3-center">Nouveau Lookbooks</h2>
-    <div class="w3-row-padding w3-margin-top">
-
-      <div class="w3-third w3-padding-small">
-        <div class="w3-card-4">
-          <img src="img/michelle-obama-1129160_1280.jpg" style="width: 100%;border-radius: 6px;">
-          <div class="w3-container w3-padding-small">
-            <h4>Michelle OBAMA</h4>
-            <p class="muted">Grande, élégante, athlétique, modèle de leadership féminin.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="w3-third w3-padding-small">
-        <div class="w3-card-4">
-          <img src="img/d2d4.jpg" style="width: 100%;border-radius: 6px;">
-          <div class="w3-container w3-padding-small">
-            <h4>Rihanna</h4>
-            <p class="muted">Style audacieux, avant-gardiste, créative et puissante.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="w3-third w3-padding-small">
-        <div class="w3-card-4">
-          <img src="img/OIP.webp" style="width: 100%;border-radius: 6px;">
-          <div class="w3-container w3-padding-small">
-            <h4>Elizabeth Taylor</h4>
-            <p class="muted">Style glamour, bijoux luxueux, beauté classique.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="w3-container">
-      <div class="w3-row-padding">
-        <div class="w3-half">
-          <h3 style="color:#fff; margin-top:6px">Inscrivez-vous à la newsletter</h3>
-          <p class="muted">Recevez nos nouveautés & offres.</p>
-          <form class="w3-row">
-            <div class="w3-col s8">
-              <input class="w3-input w3-white w3-border" type="email" placeholder="Votre email">
-            </div>
-            <div class="w3-col s4">
-              <button class="w3-button w3-dark-grey w3-block">S'abonner</button>
-            </div>
-          </form>
-        </div>
-
-        <div class="w3-half w3-right-align">
-          <h4 style="color:#fff">Mayonka</h4>
-          <p class="muted">© 2025 Mayonka — Tous droits réservés</p>
-          <p class="muted">Mentions légales · CGV · Contact</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-</body>
 </html>
+
+
+<div class="w3-container w3-margin-top w3-padding-32">
+  <div class="w3-row-padding">
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="cat-card" style="background-image:url('img/Capture\ d’écran_28-11-2025_142659_.png')">
+        <div class="cat-overlay">
+          <div class="cat-title">ROBES & COMBINAISONS</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="cat-card" style="background-image:url('img/Capture\ d’écran_28-11-2025_143323_.png')">
+        <div class="cat-overlay">
+          <div class="cat-title">LINGERIE</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="cat-card" style="background-image:url('img/Capture\ d’écran_28-11-2025_143659_.png')">
+        <div class="cat-overlay">
+          <div class="cat-title">CHEMISES & BLOUSES</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="cat-card" style="background-image:url('img/Capture\ d’écran_28-11-2025_143740_.png')">
+        <div class="w3-container w3-padding-small">
+          <h3 style="margin:6px 0"></h3>
+          <div class="cat-overlay">
+            <div class="cat-title">ACCESSOIRES</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="w3-display-container" style="
+        height:450px;
+        background-image:url('img/Capture\ d\'écran\ 2025-11-29\ 155410.png');
+        background-size:cover;
+        background-position:center;
+        margin-top: 20%;
+     ">
+
+
+    <div class="w3-display-middle w3-center" style="
+            padding:40px 0;
+            width:100%;
+         ">
+
+      <div class="w3-xxlarge" style="font-family:'Times New Roman'; color:white; letter-spacing:3px;">
+        UNE LINGERIE EN SOIE
+      </div>
+
+      <div class="w3-xxlarge" style="font-family:'Times New Roman'; color:white; letter-spacing:3px;">
+        &
+      </div>
+
+      <div class="w3-xxlarge" style="font-family:'Times New Roman'; color:white; letter-spacing:3px;">
+        DENTELLE DE CALAIS
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div style="height:120px;"></div>
+
+
+
+  <div class="w3-content" style="max-width:1200px;">
+
+    <div class="w3-row-padding">
+
+
+      <div class="w3-col l3 m6 s12 w3-center">
+        <img src="img/Capture d'écran 2025-12-02 221420.png" class="w3-image" style="width:100%;">
+        <p class="w3-small" style="color:#b79b5b; font-family:'Times New Roman';">Lingerie</p>
+        <p style="font-family:'Times New Roman';">Le Caraco WENDY</p>
+        <p style="font-family:'Times New Roman';">69,00 €</p>
+      </div>
+
+
+      <div class="w3-col l3 m6 s12 w3-center">
+        <img src="img/Capture d'écran 2025-12-02 221618.png" class="w3-image" style="width:100%;">
+        <p class="w3-small" style="color:#b79b5b; font-family:'Times New Roman';">Robes & Combinaisons</p>
+        <p style="font-family:'Times New Roman';">Robe trapèze en velours kaki SOKEY</p>
+        <p style="font-family:'Times New Roman';">139,00 €</p>
+      </div>
+
+
+      <div class="w3-col l3 m6 s12 w3-center">
+        <img src="img/Capture d'écran 2025-12-02 232215.png" class="w3-image" style="width:90%;">
+        <p class="w3-small" style="color:#b79b5b; font-family:'Times New Roman';">Robes & Combinaisons</p>
+        <p style="font-family:'Times New Roman';">Robe courte manche trois quart MALANGA</p>
+        <p style="font-family:'Times New Roman';">109,00 €</p>
+      </div>
+
+
+      <div class="w3-col l3 m6 s12 w3-center">
+        <img src="img/Capture d'écran 2025-12-02 225156.png" class="w3-image" style="width:100%;">
+        <p class="w3-small" style="color:#b79b5b; font-family:'Times New Roman';">Lingerie</p>
+        <p style="font-family:'Times New Roman';">Le Caraco WENDY</p>
+        <p style="font-family:'Times New Roman';">69,00 €</p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <style>
+    .hero {
+      background-image: url('img/Capture\ d’écran_28-11-2025_15044_.png');
+      background-position: center;
+      height: 420px;
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      width: 100%;
+    }
+
+    .subtitle {
+      font-size: 24px;
+      font-family: "Georgia", serif;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 48px;
+      font-family: "Georgia", serif;
+      font-weight: 500;
+      letter-spacing: 2px;
+    }
+  </style>
+  </head>
+
+  <body>
+
+
+    <div class="hero w3-display-container">
+      <div class="hero-content">
+        <div class="subtitle">Retour en stock !</div>
+        <div class="title">ROBES ET COMBINAISONS</div>
+      </div>
+    </div>
+
+    <div class="w3-row-padding w3-margin-top">
+
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card-4 prod-card">
+          <span class="promo-badge">PROMO</span>
+          <img src="img/Capture d’écran_28-11-2025_143815_.png" style="width: 100%" alt="prod">
+          <div class="w3-container w3-white w3-padding-small">
+            <div class="product-title">Chemises & Blouses</div>
+            <div class="w3-small">Chemise manche longue TAKI-TAKI</div>
+            <div class="w3-margin-top"><span class="old-price">85,00 €</span> <span class="price">42,50 €</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card-4 prod-card">
+          <span class="promo-badge">PROMO</span>
+          <img src="img/Capture d’écran_28-11-2025_143910_.png" style="width:100%" alt="prod">
+          <div class="w3-container w3-white w3-padding-small">
+            <div class="product-title">Chemises & Blouses</div>
+            <div class="w3-small">Blouse noire manche longue PAULINE</div>
+            <div class="w3-margin-top"><span class="old-price">89,00 €</span> <span class="price">44,50 €</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card-4 prod-card">
+          <span class="promo-badge">PROMO</span>
+          <img src="img/Capture d’écran_28-11-2025_143933_.png" style="width:100%" alt="prod">
+          <div class="w3-container w3-white w3-padding-small">
+            <div class="product-title">Robes & Combinaisons</div>
+            <div class="w3-small">Combinaison noir manche longue avec col blanc ELENA</div>
+            <div class="w3-margin-top"><span class="old-price">149,00 €</span> <span class="price">74,50 €</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card-4 prod-card">
+          <span class="promo-badge">PROMO</span>
+          <img src="img/Capture d’écran_28-11-2025_143815_.png" style="width: 100%" alt="prod">
+          <div class="w3-container w3-white w3-padding-small">
+            <div class="product-title">Chemises & Blouses</div>
+            <div class="w3-small">Chemise manche longue TAKI-TAKI</div>
+            <div class="w3-margin-top"><span class="old-price">85,00 €</span> <span class="price">42,50 €</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</div>
+
+
+<div id="lookbook" class="w3-container w3-padding-0">
+  <div class="lookbook-hero" style="background-image:url('img/Capture\ d’écran_28-11-2025_144016_.jpeg')">
+  </div>
+</div>
+
+
+
+<div id="blog" class="w3-container w3-padding-48 w3-light-grey">
+  <div class="w3-row-padding w3-margin-top">
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <img src="img/Capture d’écran_28-11-2025_144048_.jpeg" style="width:100%">
+      <h4 class="article-title">MICHELLE OBAMA : L'EX-PREMIÈRE DAME REFAIT SA VIE</h4>
+      <p class="w3-small">Michelle Obama:l'ex-première damme refait sa vie huit ans que Michelle Obama,née Michelle
+        LaVaughn Robinson,a vécu à la maison blanche...</p>
+      <a href="#" class="w3-small">LIRE L'ARTICLE</a>
+    </div>
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <img src="img/Capture d'écran 2025-12-02 135638.png" style="width:100%">
+      <h4 class="article-title">RIHANNA, LA FEMME D'AFFAIRES</h4>
+      <p class="w3-small">Rihanna,la femme d'affaires.La chanteuse du R'n'B est devenue en quelques années une femme
+        d'affaires exemplaires dans ce monde très...</p>
+      <a href="#" class="w3-small">LIRE L'ARTICLE</a>
+    </div>
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <img src="img/Capture d’écran_28-11-2025_144214_.jpeg" style="width:100%">
+      <h4 class="article-title">OPRAH WINFREY : L'INCONTOURNABLE AUX ETATS-UNIS</h4>
+      <p class="w3-small">Une enfance difficile .Née le 29 janvier 1954, Ophrah Winfrey grandit dans une famille presque
+        banale aux Etats-Unis.Elle grandit dans...</p>
+      <a href="#" class="w3-small">LIRE L'ARTICLE</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="w3-container w3-padding-48">
+  <div class="w3-center testimonial">
+    <div class="w3-small">CE QU'ILS DISENT</div>
+    <h3 class="title-font">Les petits mots des autres.</h3>
+    <p class="w3-large">Merci beaucoup, j'ai bien reçu ma robe elle est magnifique.</p>
+    <p class="w3-medium">Roselyne.S</p>
+  </div>
+</div>
+
+
+<div class="w3-container w3-padding-48 w3-light-grey">
+  <div class="w3-center w3-padding-32">
+    <h4 class="title-font">S'INSCRIRE À LA NEWSLETTER</h4>
+    <form class="w3-row">
+      <div class="w3-col s8 m6 l4"><input class="w3-input w3-border" type="email" placeholder="Email"></margin-auto>
+      </div>
+      <div class="w3-col s4 m2 l1"><button class="w3-button w3-dark-grey">S'abonner</button></div>
+    </form>
+  </div>
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    .insta-section {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    .insta-icons i {
+      font-size: 18px;
+      margin: 0 12px;
+      color: #333;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .insta-icons i:hover {
+      opacity: 0.6;
+    }
+
+    .insta-img img {
+      width: 130px;
+      height: 170px;
+      object-fit: cover;
+      margin: 10px;
+      border-radius: 3px;
+      transition: 0.3s;
+    }
+
+    .insta-img img:hover {
+      opacity: 0.8;
+    }
+
+    .small-text {
+      font-size: 13px;
+      color: #666;
+      margin-top: 8px;
+    }
+  </style>
+
+  </head>
+
+  <body>
+
+
+    <div class="w3-center insta-section">
+      <div class="insta-icons">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-pinterest-p"></i>
+      </div>
+
+      <div class="w3-center" style="margin-top:20px;">
+
+        <label class="w3-small">
+          <input class="w3-check" type="checkbox" style="margin-right:6px">
+          En continuant, vous acceptez nos conditions d’utilisation
+        </label>
+
+      </div>
+
+      <h4 style="font-family: Georgia; letter-spacing:1px; margin-top:35px; margin-bottom:25px;">
+        TENDANCES SUR LE FLUX INSTAGRAM
+      </h4>
+
+
+      <div class="insta-img">
+        <img src="img/Capture d'écran 2025-12-02 233833.png">
+        <img src="img/Capture d'écran 2025-12-02 233843.png">
+        <img src="img/Capture d'écran 2025-12-02 233855.png">
+        <img src="img/Capture d'écran 2025-12-03 002703.png">
+        <img src="img/Capture d'écran 2025-12-02 233910.png">
+        <img src="img/Capture d'écran 2025-12-03 002709.png">
+        <img src="img/Capture d'écran 2025-12-02 233958.png">
+        <img src="img/Capture d'écran 2025-12-02 233944.png">
+      </div>
+
+
+    </div>
+
+
+    <div style="background:black; color:white; padding:40px 0; text-align:center; font-family:serif;">
+
+
+      <div class="w3-row" style="max-width:1200px; margin:auto;">
+
+
+        <div class="w3-quarter" style="font-size:15px;">
+          <b style="font-size:18px;">Des questions ?</b>
+          <p>Mail : ofa@mayonka.com</p>
+          <p>Écrivez-nous</p>
+          <p>Whatsapp : (+33) 621 193 823</p>
+          <p>Instagram : @mayonka_paris</p>
+        </div>
+
+
+        <div class="w3-quarter" style="font-size:15px;">
+          <b style="font-size:18px;">A propos</b>
+          <p>La marque</p>
+          <p>L’atelier</p>
+          <p>Fabrication française</p>
+          <p>Nos engagements</p>
+        </div>
+
+
+        <div class="w3-quarter" style="font-size:15px;">
+          <b style="font-size:18px;">Liens utiles</b>
+          <p>Mon compte</p>
+          <p>Livraisons et Retours</p>
+          <p>Nos conseils d’entretiens</p>
+          <p>Confidentialités des données</p>
+          <p>FAQ</p>
+        </div>
+
+
+        <div class="w3-quarter" style="padding-top:60px;">
+          <img src="img/Capture d'écran 2025-12-03 000229.png" style="width:250px;">
+        </div>
+
+      </div>
+
+
+      <h1 style="margin-top:40px; margin-bottom:5px; font-size:40px; font-family:serif;">
+        MayonKa
+      </h1>
+
+
+      <p style="font-size:13px; margin:5px 0;">
+        CGV | Mentions légales
+      </p>
+
+
+      <p style="font-size:13px; margin-top:5px;">
+        © Mayonka 2022 | Tous droits réservés
+      </p>
+
+    </div>
+  </body>
+
+  </html>
